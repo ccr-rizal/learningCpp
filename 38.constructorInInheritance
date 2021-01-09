@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class one{
+	public:
+	one(){
+		cout<<"This is a non-par cons";
+	}
+	one(int a,int b){
+		cout<<"This is a para cons";
+	}
+};
+class two : public one{
+	public:
+	two(): one(10,20){
+		cout<<"This is non para cons2 ";
+	}
+	two(int a,int b){
+		cout<<"This is para cons2";
+	}
+};
+
+int main(){
+	
+	two t;
+	
+	
+	
+	return 0;
+}
