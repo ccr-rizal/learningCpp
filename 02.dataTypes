@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	int a=10;
+	float b=20.56;
+	double c=34.004;
+	bool d= false;
+	string name="Shishir";
+	cout<<"My name is "<<name<<endl;
+	cout<<d<<endl;
+	cout<<a<<endl;
+	cout<<b<<endl;
+	cout<<c<<endl;
+}
