@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+	class rectangle{
+		private:
+		int length;
+		int breadth;
+		
+		public:
+		void setlength(int l){
+			if(l<0){
+				cout<<"Length cannot be negative. Try entering positive number.";
+		exit(0);
+			}
+		
+			this->length = l;		
+		
+		}
+		void setbreadth(int b){
+			this->breadth = b;
+		}
+		
+		
+		void getarea(){
+			int area = length * breadth;
+			cout<<"The area of this rectangle is "<<area<<endl;
+		}
+		
+	};
+
+
+
+int main(){
+	
+	
+	rectangle rect;
+	rect.setlength(20);
+	rect.setbreadth(30);
+	rect.getarea(); 
+
+	
+	
+	return 0;
+}
