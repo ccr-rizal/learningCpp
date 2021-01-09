@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+	
+	int a,b;
+	cout<<"Enter the first number: ";
+	cin>>a;
+	cout<<"Enter the second number: ";
+	cin>>b;
+	
+	try{
+		if(b==0){
+			throw(b);
+		}
+	int result;
+	result = a/b;
+	cout<<"The result is "<<result;		
+	}catch(int i){
+	cout<<"Can't divide by 0";
+	}
+	
+
+	
+	
+	
+	return 0;
+}
