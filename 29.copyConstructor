@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+
+class rectangle{
+	public:
+		int length;
+		int breadth;
+		
+		rectangle(){
+			length=1;
+			breadth = 1;
+		}
+		rectangle(int l,int b){
+			length = l;
+			breadth = b;
+		}
+	
+		rectangle (rectangle &r){
+			length = r.length;
+			breadth = r.breadth;
+		}
+		
+		void getarea(){
+			cout<<"The area is "<<(length*breadth)<<endl;
+		}
+};
+
+
+int main(){
+	
+	rectangle r3(14,2);
+	r3.getarea();
+	rectangle r4(r3);
+	r4.getarea();
+	
+	
+	return 0;
+}
