@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+int a[3][4];
+int i,j;
+for(i=0;i<3;i++){
+	for(j=0;j<4;j++){
+		cout<<"Enter the value of a["<<i+1<<"]["<<j+1<<"]: ";
+		cin>>a[i][j];
+	}
+}
+
+for(i=0;i<3;i++){
+	for(j=0;j<4;j++){
+		cout<<"The value of a["<<i+1<<"]["<<j+1<<"]"<<" is "<<a[i][j]<<endl;
+	}
+}
+
+return 0;
+}
