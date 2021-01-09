@@ -1,0 +1,19 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+string ch;
+	ifstream readfile("abd.txt");
+	
+	if(!readfile){
+		cout<<"File not found.";
+	}
+	
+	while(getline (readfile,ch)){
+		cout<<ch;
+	}
+	readfile.close();
+	
+	
+	return 0;
+}
