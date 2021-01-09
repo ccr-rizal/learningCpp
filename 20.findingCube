@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int cube(int number);
+int main()
+{
+
+int number = 5;
+cout<<"The cube of "<<number<<" is "<<cube(number);
+
+
+return 0;
+}
+
+int cube(int number){
+	return (number*number*number);
+}
