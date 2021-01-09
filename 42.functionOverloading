@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+//Function Overloading And Function OverRiding
+
+class parent{
+	public:
+		void show(){
+			cout<<"Show no para."<<endl;
+		}
+		void show(int a){
+			cout<<"Shoe para."<<endl;
+		}
+};
+//Here we have overloaded the function "show".
+
+int main(){
+parent p;
+p.show(5);
+
+
+
+
+	return 0;
+}
