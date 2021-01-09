@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+int sum(int a, int b);
+int difference(int a, int b);
+int multiplication(int a, int b);
+int division(int a, int b);
+
+
+int main(){
+int fn,sn;
+cout<<"Enter the first number: ";
+cin>>fn;
+cout<<"Enter the second number: ";
+cin>>sn;
+cout<<"The sum is "<<sum(fn,sn)<<endl;
+cout<<"The difference is "<<difference(fn,sn)<<endl;
+cout<<"The multiplication is "<<multiplication(fn,sn)<<endl;
+cout<<"The division is "<<division(fn,sn)<<endl;
+
+
+
+return 0;
+}
+int sum(int a, int b){
+	int sum;
+	sum=a+b;
+	return sum;
+}
+int difference(int a, int b){
+	int difference;
+	difference=a-b;
+	return difference;
+}
+int multiplication(int a, int b){
+	int multiplication;
+	multiplication=a*b;
+	return multiplication;
+}
+int division(int a, int b){
+	int division;
+	division=a/b;
+	return division;
+}
