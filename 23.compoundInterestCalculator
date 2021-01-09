@@ -1,0 +1,52 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int calculate_interest(double p,double t,double r);
+
+int main(){
+cout<<"Enter the following properties: "<<endl;
+	double principle,rate,time;
+	cout<<"Principle: ";
+	cin>>principle;
+	cout<<"Time(In Year): ";
+	cin>>time;
+	cout<<"Rate: ";
+	cin>>rate;
+calculate_interest(principle,time,rate);
+
+
+}
+int calculate_interest(double p,double t,double r){
+	
+double interest = p*(pow((1+r/100),t)) - p;
+cout<<"The compound interest is Rs."<<interest<<endl;
+cout<<"With this,the total money amounts to Rs."<<(p+interest);
+}
+
+/*
+OR it can be better done as: 
+#include<iostream>
+#include<math.h>
+using namespace std;
+int calculate_interest(double p,double t,double r);
+
+int main(){
+double principle,time,rate;
+calculate_interest(principle,time,rate);
+
+
+}
+int calculate_interest(double p,double t,double r){
+cout<<"Enter the following properties: "<<endl;
+	double principle,rate,time;
+	cout<<"Principle: ";
+	cin>>p;
+	cout<<"Time(In Year): ";
+	cin>>t;
+	cout<<"Rate: ";
+	cin>>r;	
+double interest = p*(pow((1+r/100),t)) - p;
+cout<<"The compound interest is Rs."<<interest<<endl;
+cout<<"With this,the total money amounts to Rs."<<(p+interest);
+}
+*/
