@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+
+class rectangle{
+	public:
+		int length;
+		int breadth;
+		
+		void getarea(){
+			cout<<"The area is "<<(length*breadth)<<endl;
+		}
+		int getperimeter();
+};
+rectangle::getperimeter(){
+	cout<<"The perimeter is "<<(2*(length + breadth))<<endl;
+}
+
+int main(){
+		
+	rectangle r;
+	r.length = 20;
+	r.breadth = 10;
+	r.getperimeter();
+	r.getarea();
+	
+	return 0;
+}
