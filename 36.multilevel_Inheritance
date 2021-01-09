@@ -1,0 +1,68 @@
+#include<iostream>
+using namespace std;
+
+class student{
+	private:
+		int roll;
+		
+		public:
+			void GetRoll(){
+				cout<<"Enter the student's roll number: ";
+				cin>>roll;
+			}
+			void DisplayRoll(){
+				cout<<"Roll: "<<roll<<endl;
+			}
+};
+
+class exam:public student{
+	protected:
+		float science,math;
+		
+		public:
+			void GetMarks(){
+				cout<<"Enter marks in Science: ";
+				cin>>science;
+				cout<<"Enter marks in Maths: ";
+				cin>>math;
+			}
+	void DisplayMarks(){
+		cout<<"Marks:\nScience: "<<science<<"\nMaths: "<<math<<endl;
+	}
+};
+
+class result:public exam{
+	private:
+		float total;
+		
+		public:
+			void CalculateResult(){
+				total = science+math;
+			}
+			void DisplayResult(){
+				cout<<"Your total marks is "<<total<<endl;
+				if(total>0 && total<40){
+					cout<<"You have failed.";
+				}else if(total<100 && total>40){
+					cout<<"Congragulations,You have passed.";
+				}else{
+					cout<<"Insert Marks between 0-100";
+				exit(0);
+				}
+			}
+};
+
+
+int main(){
+	
+	result r;
+	r.GetRoll();
+	r.GetMarks();
+	r.CalculateResult();
+	cout<<"After calculating: "<<endl;
+	r.DisplayRoll();
+	r.DisplayMarks();
+	r.DisplayResult();
+	
+	return 0;
+}
