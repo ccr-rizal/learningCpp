@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+class employee{
+	private:
+	int id;
+	string name;
+	float salary;
+	
+	public:
+		employee(int id,string name,double salary){
+			this->id = id;
+			this->name = name;
+			this->salary = salary;
+		}
+	
+	
+	
+	
+	double get_annual_salary(){
+		float annual_salary = (12*salary);
+		cout<<"The annual salary is "<<annual_salary<<endl;
+	}
+};
+
+
+
+int main(){
+	
+	employee ccr(1,"Shishir Rijal",50000.25);
+	ccr.get_annual_salary();
+	
+	
+	
+	return 0;
+}
