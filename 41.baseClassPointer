@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+class base{
+
+	public: 
+	void function1(){
+		cout<<"This is function1 of base class."<<endl;
+	}
+	void function2(){
+		cout<<"This is function2 of base class."<<endl;
+	}
+	
+};
+class derived : public base{
+
+	public: 
+	void function3(){
+		cout<<"This is function3 of derived class."<<endl;
+	}
+	void function4(){
+		cout<<"This is function4 of derived class."<<endl;
+	}
+};
+
+int main(){
+
+
+base *p;
+p = new derived();
+
+p->function1();
+p->function2();
+	return 0;
+}
