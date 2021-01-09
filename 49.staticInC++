@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+class Pokhara{
+	public:
+		int visitorID;
+		string visitorName;
+		static int count;
+		Pokhara(){
+			visitorID= 5;
+			visitorName = "Shishir Rijal";
+			count ++;
+		}
+		static int get_total_visitors(){
+			return count;
+		}
+};
+
+int Pokhara::count = 0;
+
+int main(){
+	
+	Pokhara p;
+	Pokhara po;
+	Pokhara poo;
+	Pokhara poka;
+	Pokhara pio;
+	Pokhara poj;
+	
+	
+//	cout<<p.count;
+//cout<<p.get_total_visitors();
+cout<<Pokhara::get_total_visitors();
+
+	return 0;
+}
