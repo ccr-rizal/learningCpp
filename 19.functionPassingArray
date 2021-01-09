@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+void array(int a[]);
+int main()
+{
+
+int a[]={1,2,3,4,5,6};
+array(a);
+
+
+
+return 0;
+}
+
+void array(int a[]){
+	
+	int len = sizeof(a);
+	int i;
+	for(i=0;i<len;i++){
+		cout<<"The value of a"<<i+1<<" is "<<a[i]<<endl;
+	}
+	
+	
+	
+}
