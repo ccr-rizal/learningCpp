@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	int fn,sn;
+	cout<<"Enter first number: "<<endl;
+	cin>>fn;
+	cout<<"Enter second number: "<<endl;
+	cin>>sn;
+
+	cout<<"The sum is "<<(fn+sn)<<endl;
+	cout<<"The difference is "<<(fn-sn)<<endl;
+	cout<<"The multiplication is "<<(fn*sn)<<endl;
+	cout<<"The division is "<<(fn/sn)<<endl;
+	cout<<"The reminder is "<<(fn%sn)<<endl;
+	
+	return 0;
+}
