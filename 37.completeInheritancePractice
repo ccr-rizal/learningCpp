@@ -1,0 +1,105 @@
+#include<iostream>
+using namespace std;
+	
+	class student{
+		private:
+		int id;
+		string name;
+		int grade;
+		int roll;
+		
+		public:
+		void GetStudentInfo(){
+			cout<<"Enter the name of student: ";
+			cin>>name;
+			cout<<"Enter the id: ";
+			cin>>id;
+			cout<<"Enter the class: ";
+			cin>>grade;
+			cout<<"Enter the roll number: ";
+			cin>>roll;
+		}
+		void DisplayStudentInfo(){
+			cout<<"Student Details:\nID: "<<id<<"\nName: "<<name<<"\nClass: "<<grade<<"\nRoll Number: "<<roll<<endl;
+			
+		}
+		
+	};
+
+
+
+	
+	class academic: public student{
+		protected:
+	double academic_marks;
+	
+	public:	
+		void GetAcademicMarks(){
+			cout<<"Enter the academic marks of student: ";
+			cin>>academic_marks;
+		}
+		void DisplayAcademicMarks(){
+			cout<<"Academic Marks: "<<endl;
+		}
+	};
+	
+	class extra:public student{
+	
+		protected:
+		double sports_marks;
+		double discipline_marks;
+		double hygiene_marks;
+		
+		public:
+		void GetExtraMarks(){
+			cout<<"Enter marks for sports performance: ";
+			cin>>sports_marks;
+			cout<<"Enter marks for hygiene: ";
+			cin>>hygiene_marks;
+			cout<<"Enter marks for discipline: ";
+			cin>>discipline_marks;
+		}
+		void DisplayExtraMarks(){
+			cout<<"Discipline: "<<discipline_marks<<"\nHygiene: "<<hygiene_marks<<"\nSports: "<<sports_marks<<endl;
+		}
+		};
+		
+	class result : public academic , public extra{
+	
+		private:
+			double total_marks;
+		public:		
+			void GetResult(){
+		//	GetStudentInfo();
+				GetAcademicMarks();
+				GetExtraMarks();
+				total_marks=(academic_marks+discipline_marks+hygiene_marks+sports_marks);
+			}
+			void DisplayResult(){
+		//		DisplayStudentInfo();
+				DisplayAcademicMarks();
+				DisplayExtraMarks();
+				cout<<"Total Marks: "<<total_marks<<"/500"<<endl;
+				if(total_marks>=250 and total_marks <=500){
+					cout<<"Congragulations !! You passed the exam.";
+				}else{
+					cout<<"Oops!! You failed.";
+				}
+			}
+};
+
+
+
+
+int main(){
+	student s;
+	s.GetStudentInfo();
+	result r;
+	r.GetResult();
+	s.DisplayStudentInfo();
+	r.DisplayResult();
+	
+	
+	
+	return 0;
+}
