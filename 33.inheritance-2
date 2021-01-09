@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+class rectangle{
+	public:
+		int len;
+		int bre;
+		
+		rectangle(){
+			cout<<"This is constructor of rectangle"<<endl;
+		}	
+		
+		rectangle(int l,int b){
+			cout<<"This is constructor of rectangle02"<<endl;
+			len = l;
+			bre = b;
+		}	
+		
+		void area_rect(){
+			cout<<"The area of this rectangle is "<<(len*bre)<<endl;
+		}
+};
+
+class cube:public rectangle{
+	public:
+	int hei;
+	
+	cube(){
+		cout<<"This is a constructor of cube."<<endl;
+	}
+	cube(int l,int b,int h):rectangle(l,b){
+			cout<<"This is a constructor of cube02."<<endl;
+		hei = h;
+	}
+	
+	void voulume_cube(){
+		cout<<"The volume of cuboid is "<<(len*bre*hei)<<endl;
+	}
+};
+
+int main(){
+	cube c(20,40,10);
+	c.voulume_cube();
+	return 0;
+}
