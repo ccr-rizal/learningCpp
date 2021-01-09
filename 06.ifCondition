@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+int mark;
+cout<<"Enter your marks: "<<endl;
+cin>>mark;
+
+if(mark>=40 && mark<100){
+	cout<<"Congragulation!! You are passed.";
+}else if(mark <0 || mark>100){
+	cout<<"ERROR!! Check the marks again.";
+}
+else{
+	cout<<"Opps!! You failed";
+}
+
+
+return 0;
+}
