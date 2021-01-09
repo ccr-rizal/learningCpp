@@ -1,0 +1,16 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+
+int main(){
+	ofstream file("abd.txt",ios::app);   //app for append and trunc for writing
+	file<<"I got some numbers like 985452 too.";
+	file.close();
+	if(file!=0){
+		cout<<"File writing successful.";
+	}else{
+		cout<<"Error.";
+	}
+	return 0;
+}
