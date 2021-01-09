@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+
+class bike{
+	public:
+		virtual void start(){
+			cout<<"Bike started."<<endl;
+		}
+		virtual void stop(){
+			cout<<"Bike stopped."<<endl;
+		}
+};
+	
+class bulletbike:public bike{
+	public:
+		void start(){
+			cout<<"bulletbike started."<<endl;
+		}
+		void stop(){
+			cout<<"bulletbike stopped."<<endl;
+		}
+};
+
+class pulsarbike:public bike{
+	public:
+		void start(){
+			cout<<"pulsarbike started."<<endl;
+		}
+		void stop(){
+			cout<<"pulsarbike stopped."<<endl;
+		}
+};
+
+class dukebike:public bike{
+	public:
+		void start(){
+			cout<<"Dukebike started."<<endl;
+		}
+		void stop(){
+			cout<<"Dukebike stopped."<<endl;
+		}
+};
+
+
+int main(){
+	
+	bike *b;
+	b = new pulsarbike;
+	b->start();
+	b->stop();
+
+	return 0;
+}
