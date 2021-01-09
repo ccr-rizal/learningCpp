@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+class person{    //Data and Function
+	
+	//Data
+	public:
+	int id;
+	string name;
+	double height;
+	
+	//
+	void getname(){
+		cout<<"The name is "<<name;
+	}
+	
+};
+
+
+int main(){
+	
+	person p;
+	p.id = 1;
+	p.name = "Shishir Rijal";
+	p.height = 6.4;
+	p.getname();	
+	
+	return 0;
+}
