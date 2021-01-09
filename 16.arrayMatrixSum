@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+	int a[2][3], b[2][3], sum[2][3];
+	
+	int i,j;
+	for(i=0;i<2;i++){
+		for(j=0;j<3;j++){
+			cout<<"Enter the value for a["<<i+1<<"]["<<j+1<<"]: ";
+			cin>>a[i][j];
+					}
+	               }
+
+	for(i=0;i<2;i++){
+		for(j=0;j<3;j++){
+			cout<<"Enter the value for b["<<i+1<<"]["<<j+1<<"]: ";
+			cin>>b[i][j];
+					}
+	               }
+
+	for(i=0;i<2;i++){
+		for(j=0;j<3;j++){
+		sum[i][j] = a[i][j] + b[i][j];
+					}
+	               }
+
+
+
+
+	for(i=0;i<2;i++){
+		for(j=0;j<3;j++){
+			cout<<"The sum of a["<<i+1<<"]["<<j+1<<" and b["<<i+1<<"]["<<j+1<<"] is "<<sum[i][j]<<endl
+			;
+					}
+	               }
+
+
+
+return 0;
+}
