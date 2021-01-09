@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class tero;
+class mero{
+	private:
+		int age = 18;
+		friend tero;
+};
+class tero{
+	private:
+		int age = 16;
+		mero m;
+		
+		public:
+			void print_age(){
+				cout<<"Her age is "<<age<<" and my age is "<<m.age<<endl;
+				
+			}
+	
+};
+
+
+
+
+int main(){
+tero t;
+t.print_age();
+	
+	
+	return 0;
+}
