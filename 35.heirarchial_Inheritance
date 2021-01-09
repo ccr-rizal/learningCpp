@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+
+class person{
+	protected:
+		int id;
+		string name;
+public:
+	void ReadPersonData(){
+		cout<<"Enter ID: ";
+		cin>>id;
+		cout<<"Enter name: ";
+		cin>>name;
+	}	
+	void DisplayPersonData(){
+	cout<<"\n\nEmployee Data:\nID: "<<id<<"\nName: "<<name<<endl;
+	}
+};
+
+class student : public person{
+	private:
+		int roll;
+		
+		public:
+		
+			void GetRoll(){
+		ReadPersonData();
+				cout<<"Enter the student's roll number: ";
+				cin>>roll;
+			}
+			void DisplayRoll(){
+				DisplayPersonData();
+				cout<<"Roll: "<<roll<<endl;
+			}
+};
+
+class employee : public person{
+	string post;
+	int salary;
+	
+	public:
+	void ReadEmployeeData(){
+		ReadPersonData();
+		cout<<"Enter Post: ";
+		cin>>post;
+		cout<<"Enter Salary: ";
+		cin>>salary;
+	}
+void DisplayEmployeeData(){
+		DisplayPersonData();
+		cout<<"Post: "<<post<<"\nSalary: "<<salary<<endl;
+	}
+};
+
+int main(){
+employee e;
+e.ReadEmployeeData();
+e.DisplayEmployeeData();
+	
+	return 0;
+}
