@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+
+class software{
+	public:
+	static double price;
+	
+	static double get_price(){
+	return price;
+	}	
+	
+}; 
+double software::price = 25000;
+
+int main(){
+cout<<"The price of software is "<<software::get_price();	
+
+	return 0;
+}
