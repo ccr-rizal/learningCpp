@@ -1,0 +1,41 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+class student{
+	private:
+	static int id;
+	string name;
+	int grade;
+	string position;
+
+	public:	 
+	void GetInfo(){
+		cout<<"For student"<<id<<endl;;
+		cout<<"Enter the name: "<<endl;
+		cin>>name;
+		cout<<"Enter the class: "<<endl;
+		cin>>grade;
+		cout<<"Enter the position: "<<endl;
+		cin>>position;
+		id++;
+	}
+	void DisplayInfo(){
+		cout<<"Student Details\nID: "<<id<<"\nName: "<<name<<"\nClass: "<<grade<<"\nPosition: "<<position<<endl;
+	}
+};
+
+int student::id = 0;
+
+int main(){
+student s1,s2,s3;
+s1.GetInfo();
+s2.GetInfo();
+s3.GetInfo();
+s1.DisplayInfo();
+s2.DisplayInfo();
+s3.DisplayInfo();
+
+	
+	return 0;
+}
