@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+class rectangle{
+	public:
+		int len;
+		int bre;
+		
+		rectangle(){
+			cout<<"This is constructor of rectangle"<<endl;
+		}		
+};
+
+class cube:public rectangle{
+	public:
+	int hei;
+	
+	cube(){
+		cout<<"This is a constructor of cube."<<endl;
+	}
+};
+
+int main(){
+	cube cb;
+	
+	return 0;
+}
