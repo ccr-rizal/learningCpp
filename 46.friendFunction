@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class country{
+	private:
+		int country_id;
+		string country_name;
+		
+		public:
+		void country_info(){
+			country_id = 977;
+			country_name = "Nepal";	
+		}
+		friend void print_country();
+};
+
+	void print_country(){
+		country c;
+			cout<<"Country Details:\nID: "<<c.country_id<<"\nName: "<<c.country_name<<endl;
+		}
+		
+		
+
+int main(){
+	print_country();
+	
+	
+	return 0;
+}
