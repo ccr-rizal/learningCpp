@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+//For Loop
+	int i;
+	for(i=0;i<100;i++){
+		cout<<"My name is Shishir Rijal."<<i+1<<endl;
+	}
+
+
+//Do While Loop
+
+do{
+	cout<<"I love you **."<<i+1<<endl;
+	i++;
+}while(i<100);
+
+
+///While Loop
+
+int k=100;
+while(k>=10){
+	cout<<k<<endl;
+	k--;
+}
+
+
+return 0;
+}
