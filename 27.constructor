@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+//Constructor is a function which has same name as class but has no return type.
+
+class rectangle{
+	private:
+	int length;
+	int breadth;
+	
+	public:
+		
+	rectangle(){
+		this->length = 1;
+		this->breadth = 1;
+	}
+	rectangle(int l){
+//Following code will allow the program to accpet negative length;
+	/*	if(l<0){
+				cout<<"Length cannot be negative. Try entering positive number.";
+		exit(0);
+	*/	
+		this->length = l;
+		this->breadth = 1;
+	}
+	rectangle (int l,int b){
+		this->length = l;
+		this->breadth = b;
+	}	
+	
+	void getarea(){
+		int area = length * breadth;
+		cout<<"The area of this rectangle is "<<area<<endl;
+	}
+};
+
+
+int main(){
+	
+	
+	rectangle r(-10);
+	r.getarea();
+	rectangle ra(20,30);
+	ra.getarea();
+	
+	return 0;
+}
